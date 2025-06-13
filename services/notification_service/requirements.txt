@@ -1,0 +1,33 @@
+# Web framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# Message queue
+confluent-kafka==2.3.0
+
+# Data validation
+pydantic==2.5.0
+
+# Development and testing
+pytest==7.4.3
+httpx==0.25.2
+pytest-asyncio==0.21.1
+
+# Environment management
+python-dotenv==1.0.0
+
+# Email sending (if notifications include email)
+aiosmtplib==2.0.2
+email-validator==2.1.0
+
+# Push notifications (if needed)
+# pyfcm==1.5.4
+
+# Logging
+structlog==23.2.0
+
+# Async utilities
+asyncio-mqtt==0.13.0
+
+# Note: Removed sqlalchemy and psycopg2-binary as notification service 
+# doesn't seem to use database directly based on the code analysis

@@ -1,6 +1,28 @@
-fastapi
-sqlalchemy
-psycopg2-binary
-uvicorn
-pydantic
-confluent-kafka
+# Web framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# Database
+sqlalchemy==2.0.23
+psycopg2-binary==2.9.7
+
+# Data validation
+pydantic==2.5.0
+
+# Message queue
+confluent-kafka==2.3.0
+
+# Development and testing
+pytest==7.4.3
+httpx==0.25.2
+pytest-asyncio==0.21.1
+
+# Environment management
+python-dotenv==1.0.0
+
+# Security
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]==3.3.0
+
+# CORS (if needed for API gateway)
+# fastapi-cors==0.0.6

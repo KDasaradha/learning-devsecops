@@ -1,8 +1,14 @@
 FROM python:3.11-slim
 
 WORKDIR /app
-COPY app /app/app
-COPY requirements.txt .
+
+# Copy shared schemas
+COPY shared/ ./shared/
+
+# Copy service files
+COPY services/user_service/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8001"]
+COPY services/user_service/app/ ./app/
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
