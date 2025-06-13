@@ -1,4 +1,3 @@
-import pytest
 from fastapi.testclient import TestClient
 from services.task_service.app.main import app
 

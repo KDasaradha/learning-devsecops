@@ -1,4 +1,3 @@
-import pytest
 from fastapi.testclient import TestClient
 from services.notification_service.app.main import app
 
