@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
       - name: notification-service
-        image: notification_service:latest
+        image: notification-service:latest
+        imagePullPolicy: Never
         env:
         - name: KAFKA_BROKER
           value: "kafka:9092"
